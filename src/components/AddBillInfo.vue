@@ -13,9 +13,9 @@
         const billData ={
             text: text.value,
             partyAmount: parseInt(partyAmount.value),
-            billAmount: parseFloat(billAmount.value).toFixed(2),
-            tipPercent: parseFloat(tipPercent.value).toFixed(2),
-            tipAmount: parseFloat((parseFloat(billAmount.value)*(parseFloat(tipPercent.value)/100))/parseInt(partyAmount.value)).toFixed(2)
+            billAmount: parseFloat(billAmount.value),
+            tipPercent: parseFloat(tipPercent.value),
+            tipAmount: parseFloat((parseFloat(billAmount.value)*(parseFloat(tipPercent.value)/100))/parseInt(partyAmount.value)),
         }
 
         emit('billSubmitted', billData)

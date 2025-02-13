@@ -10,7 +10,7 @@
 
   const tipOwed = computed(()=>{
     return bills.value.reduce((acc, x)=>{
-      return acc+x.tipAmount
+      return acc+parseFloat(x.tipAmount)
     },0)
   })
   
@@ -21,7 +21,7 @@
       partyAmount: billData.partyAmount,
       billAmount: billData.billAmount,
       tipPercent: billData.tipPercent,
-      tipAmount: billData.tipAmount,
+      tipAmount: (billData.tipAmount).toFixed(2),
     })
     saveToLocalStorage()
   }
