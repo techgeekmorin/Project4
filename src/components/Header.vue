@@ -3,6 +3,6 @@
 </script>
 
 <template>
-    <h2 class="title">Split-Tip Payout Tracker</h2>
+    <h1 class="title">Split-Tip Payout Tracker</h1>
 
 </template>

@@ -6,6 +6,7 @@
 
   --primary: #047200;
 	--general: var(--primary);
+  --white: #fff;
 	--light: #a8a8a8;
 	--grey: #414040;
 	--dark: #004916;
@@ -30,9 +31,118 @@ body {
   font-size: 18px;
 }
 
+.container {
+  margin: 30px auto;
+  width: 400px;
+}
+
 .title{
   display: flex;
 	color: var(--dark);
 	font-size: 3.1rem;
 	font-weight: 700;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h2 {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+ 
+ 
+h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+label {
+  display: inline-block;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #11ce00;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--primary);
+  box-shadow: var(--box-shadow);
+  color: var(--white);
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+ 
+ 
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type:none;
+  padding: 15px;
+  margin-bottom: 40px;
+}
+ 
+.list li {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  color: var(--grey);
+  display:list-item;
+  justify-content: center;
+  position:relative;
+  padding: 2px;
+  margin: 5px 0;
+}
+
+.event-name {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0px;
+  font-weight: bolder;
+}
+
+.bill-details p {
+  margin: 5px 0;
+}
+.detail-title {
+  font-weight: bolder;
+}
+.delete-btn {
+  cursor: pointer;
+  background-color: var(--danger);
+  border: 0;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+ 
+ 
+.list li:hover .delete-btn {
+  opacity: 1;
 }
