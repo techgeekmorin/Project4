@@ -52,7 +52,7 @@
 
   <Header></Header>
   <div class="container">
-    <TipOwed :totalOwed="tipOwed"></TipOwed>
+    <TipOwed :totalOwed="(tipOwed).toFixed(2)"></TipOwed>
     <AddBillInfo @billSubmitted="handleBill"></AddBillInfo>
     <BillList :bills="bills" @tipPaid="handlePaid"></BillList>
   </div>
